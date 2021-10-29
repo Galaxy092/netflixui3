@@ -1,0 +1,55 @@
+:root {
+    --colorOne: #141414;
+    --colorTwo: #5c5c5c;
+    --colorWhite: #e5e5e5;
+
+    --tileBorderRadius: 4px;
+
+    --fontOne: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.774); 
+}
+.nav-scrolled {
+    background-color: var(--colorOne);
+    transition: all 250ms ease-in-out;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontOne);
+    background-color: var(--colorOne);
+}
+
+img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}

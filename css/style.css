@@ -1,0 +1,2684 @@
+:root {
+    --colorOne: #141414;
+    --colorTwo: #5c5c5c;
+    --colorWhite: #e5e5e5;
+
+    --tileBorderRadius: 4px;
+
+    --fontOne: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.774); 
+}
+.nav-scrolled {
+    background-color: var(--colorOne);
+    transition: all 250ms ease-in-out;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontOne);
+    background-color: var(--colorOne);
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    padding: 0px 78px 0px 39px;
+    position: fixed;
+    z-index: 1000;
+    /* background-color: var(--colorOne); */
+}
+
+.main-nav img{
+    width: 114.25px;
+    margin-right: 13px;
+}
+
+.main-nav i {
+    color: var(--colorWhite);
+    font-size: 13.5px;
+    align-items: center;
+}
+
+.main-nav i.fa-search {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.main-nav i.fa-bell {
+    font-size: 24px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    margin: 10.5px;
+    color: var(--colorWhite);
+    font-size: 14px;
+}
+
+.main-nav a:hover {
+    transition: all 0.3s;
+    color: #b1b0b0d3;
+}
+.home {
+    font-weight: bolder;
+}
+.home:hover {
+    color: #e5e5e5;
+}
+.main-nav .user {
+    width: 2rem;
+    margin-left: 20px;
+    border-radius: var(--tileBorderRadius);
+}
+
+.main-nav .user img {
+    display: flex;
+    align-items: center;
+}
+
+img.user {
+    margin-right: 10px;
+}
+.menu-right {
+    margin-left: auto;
+}
+
+li.push {
+    display: flex;
+    align-items: center;
+}
+
+i.fas.fa-search {
+    margin-right: 33px;
+}
+
+i.fas.fa-bell {
+    margin-right: 5px;
+}
+
+video {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.8) 0%,
+			rgba(0, 0, 0, 0.2) 20%,
+			rgba(20, 20, 20, 0.2) 80%,
+			rgba(20, 20, 20, 1) 100%
+		);
+  mix-blend-mode: overlay;
+}
+
+.banner {
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 25%;
+    margin: 0 4%;
+}
+
+.banner .poster {
+	width: 450px;
+    margin-left: 3px;
+    position: relative;
+}
+
+.banner .subtitle {
+	font-size: 1.25rem;
+	color: #fff;
+	line-height: 1.2;
+	padding-top: 2rem;
+	margin-left: 5px;
+    position: relative;
+}
+
+.buttons {
+	margin-top: 0.25rem;
+    position: relative;
+}
+
+.buttons .btn {
+	color: #000;
+	padding: 0.8rem 2rem;
+	margin-right: 0.75rem;
+	margin-left: 60px;
+	font-weight: 600;
+	border-radius: 4px;
+	background: #FFFFFF;
+	font-family: inherit;
+	font-size: 125%;
+	border: 0;
+}
+
+.buttons .btns {
+	color: #FFFFFF;
+	padding: 0.8rem 2rem;
+	margin-right: 0.75rem;
+	margin-left: 4px;
+	font-weight: 600;
+	border-radius: 4px;
+	background: #6D6D6EB3;
+	font-family: inherit;
+	font-size: 125%;
+	border: 0;
+}
+
+.buttons .btn i {
+	margin-right: 0.5rem;
+}
+
+.buttons .btns i {
+	margin-right: 10px;
+}
+
+.buttons .btns:hover {
+	background: #6d6d6e54;
+}
+
+.buttons .btn:hover {
+	background: #ffffffa8;
+}
+
+.thumbSection {
+    padding-top: 3%;
+    color: var(--colorWhite);
+}
+.thumbSection i {
+    font-size: 16px;
+    padding: 5px;
+    transition: all 250ms ease-in-out;
+}
+.thumbSection i:hover {
+    margin: 0px 10px;
+}
+.thumbTitle {
+    font-size: 20px;
+    line-height: 14px;
+    font-weight: 600;
+    margin: 0 4% 12px;
+    position: relative;
+}
+
+.thumbTiles.swiper {
+    padding: 0 4%;
+}
+
+.thumbTile {
+    width: 20%;
+}
+
+.thumbTile-image {
+    width: 100%;
+    border-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev,
+.thumbTiles .swiper-button-next {
+    height: 100%;
+    width: calc(4% - 5px);
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+.thumbTiles .swiper-button-prev {
+    left: 0;
+    border-top-right-radius: var(--tileBorderRadius);
+    border-bottom-right-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-next {
+    right: 0;
+    border-top-left-radius: var(--tileBorderRadius);
+    border-bottom-left-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev::after,
+.thumbTiles .swiper-button-next::after {
+    color: #fff;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: transform 0.1s ease-out;
+}
+
+.footer {
+	margin: 100px auto 0;
+	width: 80%;
+	color: #808080;
+    cursor: pointer;
+}
+
+.footer .social a {
+    color: #808080;
+}
+
+.footer .social i {
+	padding-right: 26px;
+	font-size: 28px;
+}
+
+.footer .social i:hover {
+    color: #bdbdbd;
+    transition: all 0.429s ease-out;
+}
+
+.flex {
+	display: flex;
+	padding-bottom: 80px;
+}
+
+.footer .info {
+	width: 25%;
+}
+
+.footer .info ul {
+	list-style: none;
+	display: inline;
+	font-size: 13px;
+}
+
+.footer .info a {
+    color: #808080;
+    text-decoration: none;
+}
+
+.footer .info a:hover {
+    color: #bdbdbd;
+    text-decoration: underline;
+}
+
+.footer .info ul li {
+	margin-top: 18px;
+}
+
+/* iPhone 5/SE & Moto G4 & Galaxy S5/Fold*/
+@media only screen
+    and (min-width: 234px)
+    and (orientation: portrait) {
+        .container {
+            height: 30vh;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 9.25px 0px 4.625px;
+            position: fixed;
+        }
+        .main-nav i {
+            font-size: 13.5px;
+        }
+        .main-nav i.fa-search {
+            font-size: 9px;
+            font-weight: bolder;
+        }
+        .main-nav i.fa-bell {
+            font-size: 12px;
+        }
+        .main-nav a {
+            margin: 5px;
+            font-size: 6px;
+            align-items: center;
+            display: flex;
+        }
+        .nav-scrolled {
+            background: transparent;
+        }
+        .main-nav img{
+            width: 50px;
+            margin-right: 0px;
+        }
+        .main-nav .user {
+            width: 1rem;
+            margin: 0px 15px;
+        }
+        i.fas.fa-search {
+            margin-right: 16.5px;
+        }
+        i.fas.fa-bell {
+            margin-right: 0px;
+        }
+        i.fas.fa-caret-down {
+            margin-right: 0px;
+        }
+        video {
+            width: 100%;
+            height: 29%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 29%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 18.5vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            margin: 0 2% ;
+        }
+        .banner .poster {
+            width: 150px;
+            margin-top: 50px;
+        }
+        .banner .subtitle {
+            display: none;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.3rem 0.6rem;
+            margin-right: 0.5rem;
+            margin-left: 10px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 8px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.3rem 0.6rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 8px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbSection i {
+            font-size: 10px;
+        }
+        .thumbTitle {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 6px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 92%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 1.8vw;
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 380px 0px 0px 40px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+/* iPhone 6/7/8 & iPhone 6/7/8 Plus & iPhone X & Pixel 2/2 XL*/
+@media only screen
+    and (min-width: 375px)
+    and (orientation: portrait) {
+        .container {
+            height: 24vh;
+        }
+        .main-nav a {
+            font-size: 9px;
+        }
+        video {
+            width: 100%;
+            height: 28%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 28%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 18.75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 35%;
+            margin: 0 3.4%;
+        }
+        .banner .poster {
+            width: 150px;
+            margin-top: 80px;
+        }
+        .buttons {
+            margin-top: 0rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.4rem 0.7rem;
+            margin-right: 0.5rem;
+            margin-left: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.4rem 0.7rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .thumbSection {
+            padding-top: 3%;
+            color: var(--colorWhite);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 450px 0px 0px 40px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+@media only screen
+    and (min-width: 380px)
+    and (orientation: portrait) {
+        .container {
+            height: 18vh;
+        }
+        .main-nav {
+            padding: 0px 16px 0px 7px;
+        }
+        video {
+            width: 100%;
+            height: 31%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 31%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 21vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 35%;
+            margin: 0 4%;
+        }
+        .banner .poster {
+            width: 160px;
+            margin-top: 90px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.4rem 1rem;
+            margin-right: 0.5rem;
+            margin-left: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.4rem 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .thumbSection {
+            padding-top: 3%;
+            color: var(--colorWhite);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 500px 0px 0px 50px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+@media only screen
+    and (min-width: 410px)
+    and (orientation: portrait) {
+        .container {
+            height: 22vh;
+        }
+        .main-nav {
+            padding: 0px 16px 0px 11px;
+        }
+        video {
+            width: 100%;
+            height: 33%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 33%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 22vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 35%;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 170px;
+            margin-top: 100px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.4rem 1rem;
+            margin-right: 0.5rem;
+            margin-left: 18px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.4rem 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .thumbSection {
+            padding-top: 3%;
+            color: var(--colorWhite);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 500px 0px 0px 50px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+@media only screen 
+    and (min-width: 430px)
+    and (orientation: portrait) {
+        .container {
+            height: 26vh;
+        }
+        video {
+            width: 100%;
+            height: 34%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 34%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 23vh;
+        }
+        .banner .poster {
+            width: 180px;
+            margin-top: 100px;
+        }
+        .buttons .btn {
+            margin-left: 18px;
+        }
+    }
+@media only screen 
+    and (min-width: 450px)
+    and (orientation: portrait) {
+        .container {
+            height: 36vh;
+        }
+        .main-nav a {
+            font-size: 12px;
+        }
+        video {
+            width: 100%;
+            height: 38%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 38%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 27vh;
+        }
+        .banner .poster {
+            width: 180px;
+            margin-top: 120px;
+        }
+    }
+@media only screen 
+    and (min-width: 486px)
+    and (orientation: portrait) {
+        .container {
+            height: 40vh;
+        }
+        .main-nav a {
+            font-size: 13px;
+        }
+        video {
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 29vh;
+        }
+        .banner .poster {
+            width: 190px;
+            margin-top: 130px;
+        }
+        .buttons .btn {
+            margin-left: 20px;
+        }
+        .thumbTiles .swiper-button-next,
+        .thumbTiles .swiper-button-prev {
+            height: 94%;
+        }
+    }
+@media only screen 
+    and (min-width: 500px)
+    and (orientation: portrait) {
+        .container {
+            height: 42vh;
+        }
+        video {
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 29vh;
+        }
+        .banner .poster {
+            width: 200px;
+            margin-top: 130px;
+        }
+        .buttons .btn {
+            margin-left: 20px;
+        }
+    }
+@media only screen 
+    and (min-width: 520px)
+    and (orientation: portrait) {
+        .container {
+            height: 43vh;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 20px 0px 12px;
+        }
+        video {
+            width: 100%;
+            height: 42%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 42%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 31vh;
+        }
+        .banner .poster {
+            width: 210px;
+            margin-top: 140px;
+        }
+        .buttons .btn {
+            margin-left: 21px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+        height: 95%;
+        width: 4%;
+        width: calc(4% - 5px);
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 520px 0px 0px 60px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+@media only screen 
+    and (min-width: 540px)
+    and (orientation: portrait) {
+        .container {
+            height: 26vh;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 20px 0px 13px;
+        }
+        video {
+            width: 100%;
+            height: 44%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 44%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 33vh;
+        }
+        .banner .poster {
+            width: 220px;
+            margin-top: 150px;
+        }
+        .buttons .btn {
+            margin-left: 22px;
+        }
+    }
+@media only screen 
+    and (min-width: 580px)
+    and (orientation: portrait) {
+        .container {
+            height: 30vh;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 22px 0px 14px;
+        }
+        video {
+            width: 100%;
+            height: 46%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 46%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 34vh;
+        }
+        .banner .poster {
+            width: 230px;
+            margin-top: 160px;
+        }
+        .buttons .btn {
+            margin-left: 24px;
+        }
+    }
+@media only screen 
+    and (min-width: 600px)
+    and (orientation: portrait) {
+        .container {
+            height: 34vh;
+        }
+        video {
+            width: 100%;
+            height: 48%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 48%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 36vh;
+        }
+        .banner .poster {
+            width: 240px;
+            margin-top: 170px;
+        }
+        .buttons .btn {
+            margin-left: 25px;
+        }
+    }
+@media only screen 
+    and (min-width: 620px)
+    and (orientation: portrait) {
+        .container {
+            height: 38vh;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 25px 0px 15px;
+        }
+        video {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 38vh;
+        }
+        .banner .poster {
+            width: 250px;
+            margin-top: 180px;
+        }
+        .buttons .btn {
+            margin-left: 25px;
+        }
+    }
+@media only screen 
+    and (min-width: 636px)
+    and (orientation: portrait) {
+        .container {
+            height: 40vh;
+        }
+        video {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 39vh;
+        }
+        .banner .poster{
+            width: 260px;
+            margin-top: 190px;
+        }
+        .buttons .btn {
+            margin-left: 27px;
+        }
+    }
+@media only screen 
+    and (min-width: 640px)
+    and (orientation: portrait) {
+        .container {
+            height: 62vh;
+        }
+        .banner {
+            height: 40vh;
+        }
+        .banner .poster {
+            width: 260px;
+            margin-top: 200px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+        height: 97.5%;
+        width: 4%;
+        width: calc(4% - 5px);
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 290px 0px 0px 60px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 10px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+/* iPad */
+@media only screen 
+    and (min-width: 768px) 
+    and (orientation: portrait) {
+        .container {
+            height: 40vh;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 28px 0px 18px;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-nav i {
+            font-size: 13.5px;
+        }
+        .main-nav i.fa-search {
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .main-nav i.fa-bell {
+            font-size: 24px;
+        }
+        .main-nav a {
+            margin: 7px;
+            font-size: 14px;
+            align-items: center;
+            display: flex;
+        }
+        .main-nav img{
+            width: 100px;
+            margin-right: 13px;
+        }
+        .main-nav .user {
+            width: 1.75rem;
+            margin: 0px 15px;
+        }
+        i.fas.fa-search {
+            margin-right: 24px;
+        }
+        i.fas.fa-bell {
+            margin-right: 5px;
+        }
+        video {
+            width: 100%;
+            height: 36%;
+        }
+        .overlay {
+            width: 1005;
+            height: 36%;
+        }
+        .banner {
+            height: 28vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 350px;
+            margin-top: 150px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.6rem 1.5rem;
+            margin-right: 0.5rem;
+            margin-left: 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.6rem 1.5rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+        height: 97%;
+        width: 4%;
+        width: calc(4% - 5px);
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 350px 0px 0px 75px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 50px;
+        }
+        .footer .social i {
+            padding-right: 40px;
+            font-size: 40px;
+        }
+        .footer .info ul li {
+            margin-top: 40px;
+            font-size: 2vw;
+        }
+    }
+/* iPad Pro */
+@media only screen 
+    and (min-width: 1024px) 
+    and (orientation: portrait) {
+        .container {
+            height: 35vh;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 29px 0px 30px;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-nav i {
+            font-size: 17.5px;
+        }
+        .main-nav i.fa-search {
+            font-size: 22px;
+            font-weight: bolder;
+        }
+        .main-nav i.fa-bell {
+            font-size: 28px;
+        }
+        .main-nav a {
+            margin: 7px;
+            font-size: 18px;
+            align-items: center;
+            display: flex;
+        }
+        .main-nav img{
+            width: 120px;
+        }
+        .main-nav .user {
+            width: 2rem;
+            margin: 0px 15px;
+        }
+        .banner {
+            height: 29vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 450px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.8rem 2rem;
+            margin-right: 0.5rem;
+            margin-left: 40px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 470px 0px 0px 95px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 50px;
+            font-size: 40px;
+        }
+        .footer .info ul li {
+            margin-top: 40px;
+            font-size: 2vw;
+        }
+    }
+@media only screen
+    and (min-width: 568px)
+    and (orientation: landscape) {
+        .container {
+            height: 38vh;
+        }
+        video {
+            width: 100%;
+            height: 52%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 52%;
+            object-fit: cover;
+        }
+        .nav-scrolled {
+            background: transparent;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 22px 0px 7px;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-nav img {
+            width: 60px;
+        }
+        .main-nav .user {
+            width: 1.5rem;
+            margin-right: 20px;
+        }
+        .main-nav li {
+            display: flex;
+            justify-content: center;
+        }
+        .main-nav a {
+            font-size: 9px;
+        }
+        .main-nav i {
+            font-size: 13.5px;
+        }
+        .main-nav i.fa-search {
+            font-size: 13.5px;
+            font-weight: bolder;
+        }
+        .main-nav i.fa-bell {
+            font-size: 16px;
+        }
+        i.fas.fa-chevron-right {
+            font-size: 12px;
+        }
+        .banner {
+            height: 38vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            margin: 0 3.8% ;
+        }
+        .banner .poster {
+            width: 200px;
+            margin-top: 100px;
+        }
+        .banner .subtitle {
+            display: none;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.6rem 1.2rem;
+            margin-right: 0.5rem;
+            margin-left: 23px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.6rem 1.2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 6px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 92%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 1.2vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 570px 0px 0px 40px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+@media only screen
+    and (min-width: 640px)
+    and (orientation: landscape) {
+        .container {
+            height: 84vh;
+        }
+        video {
+            width: 100%;
+            height: 53%;
+            object-fit: cover;
+        }
+        .nav-scrolled {
+            background: var(--colorOne);
+        }
+        .overlay {
+            width: 100%;
+            height: 53%;
+            object-fit: cover;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 24px 0px 9px;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-nav img {
+            width: 80px;
+        }
+        .main-nav li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-nav a {
+            font-size: 12px;
+        }
+        .banner {
+            height: 38vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            margin: 0 3.8% ;
+        }
+        .banner .poster {
+            width: 200px;
+            margin-top: 140px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.6rem 1.2rem;
+            margin-right: 0.5rem;
+            margin-left: 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.6rem 1.2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 6px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 90%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 1.2vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 200px 0px 0px 65px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+@media only screen
+    and (min-width: 730px)
+    and (orientation: landscape) {
+        .container {
+            height: 72vh;
+        }
+        video {
+            width: 100%;
+            height: 56%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 56%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 42vh;
+        }
+        .footer {
+            margin: 340px 0px 0px 65px;
+            width: 80%;
+        }
+    }   
+@media only screen
+    and (min-width: 750px)
+    and (orientation: landscape) {
+        .container {
+            height: 74vh;
+        }
+        video {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 44vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 25%;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 300px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            margin-right: 0.5rem;
+            margin-left: 34px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 6px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 92%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 380px 0px 0px 100px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 1.5vw;
+        }
+    }
+@media only screen
+    and (min-width: 768px)
+    and (orientation: landscape) {
+        .container {
+            height: 94vh;
+        }
+        video {
+            width: 100%;
+            height: 62%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 62%;
+            object-fit: cover;
+        }
+        .main-nav {
+            display: flex;
+            width: 100%;
+            padding: 0px 24px 0px 8px;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-nav img {
+            width: 80px;
+        }
+        .main-nav li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-nav a {
+            font-size: 12px;
+        }
+        .banner {
+            height: 46vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            margin: 0 3.8% ;
+        }
+        .banner .poster {
+            width: 200px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.6rem 1.2rem;
+            margin-right: 0.5rem;
+            margin-left: 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.6rem 1.2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 6px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 90%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 1.2vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 200px 0px 0px 65px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 2vw;
+        }
+    }
+@media only screen
+    and (min-width: 812px)
+    and (orientation: landscape) {
+        .container {
+            height: 68vh;
+        }
+        video {
+            width: 100%;
+            height: 64%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 64%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 48vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 25%;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 300px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            margin-right: 0.5rem;
+            margin-left: 34px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 6px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 92%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 380px 0px 0px 100px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 1.5vw;
+        }
+    }
+@media only screen
+    and (min-width: 820px)
+    and (orientation: landscape) {
+        video {
+            width: 100%;
+            height: 66%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 66%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 50vh;
+        }
+    }
+@media only screen
+    and (min-width: 890px)
+    and (orientation: landscape) {
+        .container {
+            height: 74vh;
+        }
+        video {
+            width: 100%;
+            height: 68%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 68%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 51vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 25%;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 300px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            margin-right: 0.5rem;
+            margin-left: 34px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 6px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 92%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 380px 0px 0px 100px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 1.5vw;
+        }
+    }
+@media only screen
+    and (min-width: 979px)
+    and (orientation: landscape) {
+        .container {
+            height: 90vh;
+        }
+        video {
+            width: 100%;
+            height: 74%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 74%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 57vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 25%;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 300px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            margin-right: 0.5rem;
+            margin-left: 34px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 10px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 6px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 92%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 380px 0px 0px 100px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 18px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 1.5vw;
+        }
+    }
+@media only screen
+    and (min-width: 1024px)
+    and (orientation: landscape) {
+        .container {
+            height: 76vh;
+        }
+        .main-nav {
+            padding: 0px 40px 0px 20px;
+        }
+        video {
+            width: 100%;
+            height: 74%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 74%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 46vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 300px;
+            margin-top: 200px;
+        }
+        .banner .subtitle {
+            font-size: 12px;
+        }
+        .buttons {
+            margin-top: 2rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 1rem 2rem;
+            margin-right: 0.5rem;
+            margin-left: 42px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 15px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 15px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 20px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 12px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 92%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 480px 0px 0px 100px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 26px;
+            font-size: 30px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 1.5vw;
+        }
+    }
+@media only screen
+    and (min-width: 1024px)
+    and (orientation: landscape) {
+        video {
+            width: 100%;
+            height: 76%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 76%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 50vh;
+        }
+    }
+@media only screen
+    and (min-width: 1200px)
+    and (orientation: landscape) {
+        .container {
+            height: 68vh;
+        }
+        video {
+            width: 100%;
+            height: 86%;
+            object-fit: cover;
+        }
+        .overlay {
+            width: 100%;
+            height: 86%;
+            object-fit: cover;
+        }
+        .banner {
+            height: 64vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 30%;
+            text-indent: 29px;
+            margin: 0 4% ;
+        }
+        .banner .poster {
+            width: 450px;
+            margin-top: 200px;
+        }
+        .buttons {
+            margin-top: 0.05rem;
+            display: flex;
+        }
+        .buttons .btn {
+            color: #000;
+            padding: 1rem 2rem;
+            margin-right: 0.5rem;
+            margin-left: 60px;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #FFFFFF;
+            font-family: inherit;
+            font-size: 18px;
+            border: 0;
+        }
+        .buttons .btns {
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #6D6D6EB3;
+            font-family: inherit;
+            font-size: 18px;
+            border: 0;
+        }
+        .buttons .btn i {
+            margin-right: 0.5rem;
+        }
+        .buttons .btns i {
+            margin-right: 10px;
+        }
+        .swiper-wrapper {
+            padding: 0px 0px 5px 0px;
+        }
+        .thumbSection {
+            padding-top: 4.25%;
+            color: var(--colorWhite);
+        }
+        .thumbTitle {
+            font-size: 20px;
+            line-height: 14px;
+            font-weight: 600;
+            margin: 0 4% 12px;
+        }
+        .thumbTiles .swiper-button-prev,
+        .thumbTiles .swiper-button-next {
+            height: 94%;
+            width: calc(4% - 4px);
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+        .thumbTiles .swiper-button-prev::after,
+        .thumbTiles .swiper-button-next::after {
+            display: none;
+            font-size: 2.4vw;
+        }
+        .thumbTiles .swiper-button-prev:hover::after,
+        .thumbTiles .swiper-button-next:hover::after {
+            transform: scale(1.25);
+        }
+        .thumbTiles:hover .swiper-button-prev::after,
+        .thumbTiles:hover .swiper-button-next::after {
+            display: block;
+        }
+        .footer {
+            margin: 650px 0px 0px 200px;
+            width: 80%;
+        }
+        .flex {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .footer .social i {
+            padding-right: 80px;
+            font-size: 40px;
+        }
+        .footer .info ul li {
+            margin-top: 28px;
+            font-size: 1vw;
+        }
+    }
+@media only screen
+    and (min-width: 1250px)
+    and (orientation: landscape) {
+        .container {
+            height: 72vh;
+        }
+        video {
+            width: 100%;
+            height: 88%;
+        }
+        .overlay {
+            width: 100%;
+            height: 88%;
+        }
+        .banner {
+            height: 66vh;
+        }
+    }
+@media only screen 
+    and (min-width: 1300px) {
+        .container {
+            height: 78vh;
+        }
+        .main-nav a {
+            font-size: 14px;
+        }
+        .main-nav img {
+            width: 114.25px;
+        }
+        .main-nav i {
+            font-size: 27px;
+        }
+        .main-nav .user {
+            width: 2rem;
+        }
+        .main-nav i.fa-search {
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .main-nav i.fa-bell {
+            font-size: 24px;
+        }
+        i.fas.fa-caret-down {
+            font-size: 18px;
+        }
+        video {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 90%;
+            top: 0;
+            left: 0;
+        }
+        .overlay
+        {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 90%;
+          background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.8) 0%,
+                    rgba(0, 0, 0, 0.2) 20%,
+                    rgba(20, 20, 20, 0.2) 80%,
+                    rgba(20, 20, 20, 1) 100%
+                );
+          mix-blend-mode: overlay;
+        }
+        .banner {
+            height: 68vh;
+            width: 40%;
+        }
+        .banner .subtitle {
+            display: block;
+            font-size: 20px;
+        }
+        .footer .info  ul li {
+            font-size: 1vw;
+            margin-top: 38px;
+        }
+    }
+@media only screen 
+    and (min-width: 1400px) {
+        .container {
+            height: 94vh;
+        }
+        .main-nav a {
+            font-size: 14px;
+        }
+        .main-nav img {
+            width: 114.25px;
+        }
+        .main-nav i {
+            font-size: 27px;
+        }
+        .main-nav .user {
+            width: 2rem;
+        }
+        .main-nav i.fa-search {
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .main-nav i.fa-bell {
+            font-size: 24px;
+        }
+        i.fas.fa-caret-down {
+            font-size: 18px;
+        }
+        video {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 98%;
+            top: 0;
+            left: 0;
+        }
+        .overlay
+        {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 98%;
+          background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.8) 0%,
+                    rgba(0, 0, 0, 0.2) 20%,
+                    rgba(20, 20, 20, 0.2) 80%,
+                    rgba(20, 20, 20, 1) 100%
+                );
+          mix-blend-mode: overlay;
+        }
+        .banner {
+            height: 76vh;
+            width: 40%;
+        }
+        .banner .subtitle {
+            display: block;
+            font-size: 20px;
+        }
+        .footer .info  ul li {
+            font-size: 1vw;
+            margin-top: 38px;
+        }
+    }
